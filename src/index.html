@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockLine</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">↗</span><span>StockLine</span></div>
+      <div class="status"><span class="status-dot"></span><span id="market-status">Monitoring session ready</span><span id="clock"></span></div>
+    </header>
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="section-label">Workspace</div>
+        <button class="nav-item active">◈ <span>Overview</span></button>
+        <button class="nav-item">◌ <span>Watchlist</span></button>
+        <button class="nav-item">⌁ <span>Strategies</span></button>
+        <button class="nav-item">▣ <span>Backtesting</span></button>
+        <div class="sidebar-footer">
+          <div class="section-label">Principles</div>
+          <p>Signals are analytical context, not predictions or financial advice.</p>
+        </div>
+      </aside>
+      <section class="content">
+        <div class="page-heading">
+          <div><p class="eyebrow">MARKET OVERVIEW</p><h1>Your market, at a glance.</h1><p class="muted">Track signals and risk across your watchlist. Make the final decision yourself.</p></div>
+          <button id="refresh" class="button secondary">Refresh data</button>
+        </div>
+        <div class="metrics">
+          <div class="metric-card"><span>Watchlist assets</span><strong id="asset-count">3</strong><small>Across stocks and crypto</small></div>
+          <div class="metric-card"><span>Active alerts</span><strong id="alert-count">0</strong><small>Notifications are enabled</small></div>
+          <div class="metric-card"><span>Session trend</span><strong class="positive">+1.8%</strong><small>Based on tracked assets</small></div>
+        </div>
+        <div class="grid">
+          <section class="panel watchlist-panel">
+            <div class="panel-heading"><div><h2>Watchlist</h2><p class="muted">Add an asset to begin monitoring.</p></div><button id="add-asset" class="button primary">+ Add asset</button></div>
+            <div id="watchlist" class="watchlist"></div>
+          </section>
+          <section class="panel insight-panel">
+            <div class="panel-heading"><div><h2>Signal context</h2><p class="muted">Explainable indicators, not trade instructions.</p></div></div>
+            <div id="insight" class="insight"><div class="signal-badge">WATCH</div><h3>Select an asset</h3><p class="muted">Choose an asset from your watchlist to inspect its indicator context.</p></div>
+          </section>
+        </div>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Monitoring checklist</h2><p class="muted">A safer workflow for short-term analysis.</p></div></div>
+          <div class="checklist"><div><span class="check">1</span><span><b>Define your entry</b><small>Record where and why you entered before watching signals.</small></span></div><div><span class="check">2</span><span><b>Confirm across timeframes</b><small>Use trend, momentum, volume, and support/resistance together.</small></span></div><div><span class="check">3</span><span><b>Set risk before reward</b><small>Alerts highlight conditions; they do not guarantee outcomes.</small></span></div></div>
+        </section>
+      </section>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

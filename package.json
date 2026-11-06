@@ -1,0 +1,36 @@
+{
+  "name": "stockline",
+  "version": "0.1.0",
+  "description": "A desktop market-monitoring assistant for watchlists, indicators, and alerts.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "package": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "markets",
+    "technical-analysis"
+  ],
+  "author": "AutomatonXV",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^39.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.automatonxv.stockline",
+    "productName": "StockLine",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "allowScripts": {
+    "electron@39.8.10": true
+  }
+}
